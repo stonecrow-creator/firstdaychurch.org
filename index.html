@@ -78,21 +78,12 @@ nav a:hover,nav a.active{color:var(--gold2);border-bottom:1px solid var(--gold)}
 footer{background:#06121c;text-align:center;padding:28px 16px;color:#d8cba9}
 footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
 .small{font-size:13px;opacity:.85;margin-top:8px}
-
-/* Welcome video overlay */
-.video-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:24px}
-.video-overlay.open{display:flex}
-.video-frame{position:relative;width:min(1100px,94vw);aspect-ratio:16/9;background:#000;box-shadow:0 0 45px rgba(214,164,67,.25);border:1px solid rgba(214,164,67,.7)}
-.video-frame iframe{width:100%;height:100%;border:0}
-.video-close{position:absolute;right:-4px;top:-48px;width:38px;height:38px;border:1px solid #d6a443;background:#06121c;color:#f2d18a;font:700 24px Georgia,serif;cursor:pointer;border-radius:50%}
-.video-close:hover{background:#34250f}
-
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a class="brand" href="#home" aria-label="The Church of the First Day home">
+  <a class="brand" href="index.html" aria-label="The Church of the First Day home">
     <div class="brand-mark">✦</div>
     <div>
       <div class="brand-title">The Church of the First Day</div>
@@ -103,30 +94,18 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
     <a class="active" href="#home">Home</a>
     <a href="about.html">About</a>
     <a href="radiances.html">The Radiances</a>
-    <a href="#learn">Learn</a>
-    <a href="#community">Community</a>
+    <a href="learn.html">Learn</a>
+    <a href="community.html">Community</a>
     <a href="#visit">Visit</a>
     <a class="nav-cta" href="#visit">COME AS YOU ARE</a>
   </nav>
 </header>
 
-
-<div class="video-overlay" id="welcomeVideo" role="dialog" aria-modal="true" aria-label="Welcome video">
-  <div class="video-frame">
-    <button class="video-close" type="button" aria-label="Close welcome video" onclick="closeWelcomeVideo()">×</button>
-    <iframe id="welcomeVideoFrame"
-      src=""
-      title="The Church of the First Day"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-</div>
-
 <main id="home">
   <section class="section hero" aria-label="Welcome">
     <img class="art" src="hero.jpg" alt="A sunrise over a fantasy mountain kingdom, with a traveler and dragon.">
     <a class="hotspot hot-come" href="#visit" aria-label="Please come in"></a>
-    <a class="hotspot hot-video" href="#welcome-video" aria-label="Play the Church of the First Day welcome video" onclick="openWelcomeVideo(event)"></a>
+    <a class="hotspot hot-video" href="about.html" aria-label="Welcome video"></a>
   </section>
 
   <section class="section radiances" id="radiances" aria-label="The Eight Radiances">
@@ -152,9 +131,9 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
 
   <section class="section cards" id="learn" aria-label="Explore">
     <img class="art" src="cards.jpg" alt="Explore Our Teachings, Begin Your Journey, and Find Your Community.">
-    <a class="hotspot c1" href="#teachings" aria-label="Explore Our Teachings"></a>
+    <a class="hotspot c1" href="learn.html" aria-label="Explore Our Teachings"></a>
     <a class="hotspot c2" href="#journey" aria-label="Begin Your Journey"></a>
-    <a class="hotspot c3" href="#community" aria-label="Find Your Community"></a>
+    <a class="hotspot c3" href="community.html" aria-label="Find Your Community"></a>
   </section>
 
   <section class="section cta" id="visit" aria-label="Come as you are">
@@ -184,30 +163,5 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
   <strong>The Church of the First Day</strong>
   <div class="small">A Path of Awakening, Recognition, and Becoming · Contact · Newsletter · Privacy · Accessibility</div>
 </footer>
-
-<script>
-function openWelcomeVideo(event){
-  event.preventDefault();
-  const overlay=document.getElementById('welcomeVideo');
-  const frame=document.getElementById('welcomeVideoFrame');
-  frame.src='https://www.youtube.com/embed/9Go_P7BQUnA?autoplay=1&rel=0';
-  overlay.classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeWelcomeVideo(){
-  const overlay=document.getElementById('welcomeVideo');
-  const frame=document.getElementById('welcomeVideoFrame');
-  frame.src='';
-  overlay.classList.remove('open');
-  document.body.style.overflow='';
-}
-document.getElementById('welcomeVideo').addEventListener('click',function(e){
-  if(e.target===this) closeWelcomeVideo();
-});
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape') closeWelcomeVideo();
-});
-</script>
-
 </body>
 </html>

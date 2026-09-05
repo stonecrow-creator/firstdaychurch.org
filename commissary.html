@@ -3,44 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Commissary | The Church of the First Day">
+<meta name="description" content="The Commissary of the Church of the First Day — curated works, handcrafted pieces, books, cards, candles, stones, and commissioned creations.">
 <title>Commissary | The Church of the First Day</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#06121c;--gold:#d6a443;--gold2:#f2d18a;--vellum:#efe0bb;--ink:#241d14}
+:root{--navy:#06121c;--navy2:#091b29;--gold:#d6a443;--gold2:#f2d18a;--vellum:#efe0bb;--ink:#241d14}
 *{box-sizing:border-box}body{margin:0;background:var(--navy);color:#eee7d7;font-family:"Cormorant Garamond",Georgia,serif}
-a{color:inherit;text-decoration:none}header{min-height:76px;background:#06111a;border-bottom:1px solid #9c722f;display:flex;align-items:center;justify-content:space-between;padding:9px 4vw}
+a{color:inherit;text-decoration:none}
+header{min-height:76px;background:#06111a;border-bottom:1px solid #9c722f;display:flex;align-items:center;justify-content:space-between;padding:9px 4vw}
 .brand{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:25px}
 .title{font-family:Cinzel,serif;font-size:clamp(15px,1.5vw,23px);letter-spacing:.06em;color:#f3dda8}.sub{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#cbb98f}
-nav{display:flex;gap:1.35vw;align-items:center;flex-wrap:wrap;justify-content:flex-end;font-family:Cinzel,serif;font-size:12px}nav a{padding:7px 0;color:#e8ddc7}nav a:hover,nav .active{color:var(--gold2);border-bottom:1px solid var(--gold)}nav .cta{padding:9px 13px;border:1px solid var(--gold);border-radius:4px;background:linear-gradient(#6d4a1d,#34230e)}
-.hero{min-height:390px;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 22px;background:radial-gradient(circle at center,rgba(142,96,30,.28),transparent 58%),linear-gradient(180deg,#081724,#06121c)}
-.kicker{font-family:Cinzel,serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);font-size:12px}h1{font-family:Cinzel,serif;font-size:clamp(38px,5vw,68px);letter-spacing:.08em;margin:15px 0;color:#f6e1ae}.lead{font-size:clamp(21px,2.2vw,29px);font-style:italic;margin:0 auto;max-width:850px}
-.section{padding:72px 22px}.vellum{background:var(--vellum);color:var(--ink)}.inner{max-width:1080px;margin:auto}
-h2{font-family:Cinzel,serif;letter-spacing:.09em;text-align:center;font-size:31px;color:var(--gold2);margin:0 0 28px}.vellum h2{color:#76501d}
-.intro{font-size:22px;line-height:1.65;text-align:center;max-width:900px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}.card{padding:32px 28px;border:1px solid rgba(118,80,29,.4);background:rgba(255,255,255,.2);min-height:245px}.card h3{font-family:Cinzel,serif;color:#6e491a;font-size:23px;letter-spacing:.05em;margin:0 0 14px}.card p{font-size:20px;line-height:1.55;margin:0}
-.dark{background:#06121c}.dark .card{border-color:rgba(214,164,67,.5);background:rgba(255,255,255,.035)}.dark .card h3{color:#f0d49a}.dark .card p{color:#e5decf}
-.quote{padding:65px 22px;text-align:center;background:#050d14;border-top:1px solid rgba(214,164,67,.35);border-bottom:1px solid rgba(214,164,67,.35)}.quote p{max-width:850px;margin:0 auto;font-size:31px;font-style:italic;color:#f0d69c;line-height:1.45}
+nav{display:flex;gap:1.2vw;align-items:center;flex-wrap:wrap;justify-content:flex-end;font-family:Cinzel,serif;font-size:12px}
+nav a{padding:7px 0;color:#e8ddc7}nav a:hover,nav .active{color:var(--gold2);border-bottom:1px solid var(--gold)}
+nav .cta{padding:9px 13px;border:1px solid var(--gold);border-radius:4px;background:linear-gradient(#6d4a1d,#34230e)}
+.hero{min-height:540px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 22px;overflow:hidden;background-image:linear-gradient(rgba(3,10,16,.48),rgba(3,10,16,.82)),url("commissary-collection.jpg");background-size:cover;background-position:center}
+.hero:after{content:"";position:absolute;inset:20px;border:1px solid rgba(214,164,67,.65);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:900px}.kicker{font-family:Cinzel,serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2);font-size:12px}
+h1{font-family:Cinzel,serif;font-size:clamp(42px,6vw,78px);letter-spacing:.08em;margin:15px 0;color:#f6e1ae;text-shadow:0 3px 18px #000}
+.lead{font-size:clamp(21px,2.3vw,31px);font-style:italic;line-height:1.4;margin:0 auto;max-width:850px}
+.section{padding:76px 22px}.vellum{background:var(--vellum);color:var(--ink)}.dark{background:var(--navy2)}
+.inner{max-width:1160px;margin:auto}h2{font-family:Cinzel,serif;letter-spacing:.1em;text-align:center;font-size:31px;margin:0 0 20px;color:var(--gold2)}.vellum h2{color:#76501d}
+.intro{font-size:22px;line-height:1.65;text-align:center;max-width:900px;margin:0 auto 42px}
+.collections{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.collection{position:relative;min-height:290px;padding:36px;border:1px solid rgba(118,80,29,.42);overflow:hidden;background:#f3e5c4}
+.collection:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(239,224,187,.98),rgba(239,224,187,.82));}
+.collection>*{position:relative}
+.collection h3{font-family:Cinzel,serif;font-size:25px;color:#6e491a;letter-spacing:.06em;margin:0 0 13px}.collection p{font-size:20px;line-height:1.55;max-width:470px;margin:0}
+.collection .tag{display:inline-block;margin-bottom:18px;font-family:Cinzel,serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8b6426}
+.work-photo{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.photo{width:100%;display:block;border:2px solid #a4772c;box-shadow:0 15px 40px rgba(0,0,0,.3)}
+.work-copy p{font-size:21px;line-height:1.65}.work-copy h3{font-family:Cinzel,serif;color:var(--gold2);font-size:27px;letter-spacing:.06em}
+.amazon{display:inline-block;margin-top:22px;padding:12px 18px;border:1px solid var(--gold);border-radius:4px;color:#f2d18a;font-family:Cinzel,serif;font-size:12px;letter-spacing:.07em}
+.note{margin-top:32px;padding:25px;border-left:2px solid var(--gold);background:rgba(255,255,255,.035);font-size:19px;line-height:1.5}
+.quote{padding:65px 22px;text-align:center;background:#050d14;border-top:1px solid rgba(214,164,67,.35);border-bottom:1px solid rgba(214,164,67,.35)}.quote p{max-width:900px;margin:0 auto;font-size:31px;font-style:italic;color:#f0d69c;line-height:1.45}
 footer{text-align:center;padding:30px 18px;background:#06121c;color:#d7c8a5}footer strong{font-family:Cinzel,serif;color:#f0d69c;letter-spacing:.08em}.small{font-size:13px;margin-top:8px;opacity:.85}
-@media(max-width:1000px){header{flex-wrap:wrap;gap:10px}nav{width:100%;justify-content:center}.grid{grid-template-columns:1fr}}
+@media(max-width:850px){header{flex-wrap:wrap;gap:10px}nav{width:100%;justify-content:center}.collections{grid-template-columns:1fr}.work-photo{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
 <a class="brand" href="index.html"><div class="mark">✦</div><div><div class="title">The Church of the First Day</div><div class="sub">A Path of Awakening, Recognition, and Becoming</div></div></a>
 <nav aria-label="Main navigation">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="radiances.html">The Radiances</a><a href="learn.html">Learn</a><a href="community.html">Community</a><a class="active" href="commissary.html">Commissary</a><a href="index.html#visit">Visit</a><a class="cta" href="index.html#visit">COME AS YOU ARE</a>
+<a href="index.html">Home</a><a href="about.html">About</a><a href="radiances.html">The Radiances</a><a href="learn.html">Learn</a><a href="community.html">Community</a><a href="library.html">Library</a><a class="active" href="commissary.html">Commissary</a><a href="index.html#visit">Visit</a><a class="cta" href="index.html#visit">COME AS YOU ARE</a>
 </nav>
 </header>
+
 <main>
-<section class="hero"><div><div class="kicker">The Church Resource House</div><h1>THE COMMISSARY</h1><p class="lead">A practical place for the books, materials, and resources connected with the life of the Church.</p></div></section>
-<section class="section vellum"><div class="inner"><h2>The Commissary of the Church</h2>
-<p class="intro">The Commissary can provide a direct path to books and published works of the Church, making the teachings available beyond the digital sanctuary.</p>
-<div class="grid"><article class="card"><h3>Books & Works</h3><p>The Commissary can provide a direct path to books and published works of the Church, making the teachings available beyond the digital sanctuary.</p></article><article class="card"><h3>Church Materials</h3><p>Future Church materials, printed resources, cards, ceremonial pieces, and other works may find their home here as they are developed.</p></article><article class="card"><h3>A Growing House</h3><p>We will build this room carefully. Nothing needs to be offered simply because a shelf exists; the Commissary will grow as the needs and work of the Church become clear.</p></article></div></div></section>
-<section class="quote"><p>“What we carry into the world should serve the Path, not distract from it.”</p></section>
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">The Works of the First Day</div>
+<h1>THE COMMISSARY</h1>
+<p class="lead">Works, tools, and treasures created to accompany the journey.</p>
+</div>
+</section>
+
+<section class="section vellum">
+<div class="inner">
+<h2>Not a Store. A Collection.</h2>
+<p class="intro">The Commissary is where the tangible works of the Church may be found—things written, crafted, gathered, or made by hand. Each has a purpose, whether it is meant for study, practice, personal use, or the simple joy of carrying a little piece of the First Day with you.</p>
+<div class="collections">
+<article class="collection"><span class="tag">Collection I</span><h3>The Written Works</h3><p>Published books may be acquired through Amazon. Church booklets, guides, catechisms, and other completed writings may be provided directly by the Church.</p></article>
+<article class="collection"><span class="tag">Collection II</span><h3>The Dragon Works</h3><p>The Draconic Rune cards and other completed Dragon Magick works bring the language and imagery of the Dragons into a form that can be held, studied, and worked with.</p></article>
+<article class="collection"><span class="tag">Collection III</span><h3>The Handcrafted Works</h3><p>Hand-sewn grigri bags, crystals and stones, and hand-poured dragon candles in different shapes, sizes, colors, and custom fragrances.</p></article>
+<article class="collection"><span class="tag">Collection IV</span><h3>The Commissioned Works</h3><p>Some works are made individually: custom-built staffs, custom-fragranced candles, and other handcrafted pieces created for a particular seeker.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section dark">
+<div class="inner work-photo">
+<div><img class="photo" src="commissary-display.jpg" alt="The Church of the First Day's completed books, cards, sewn bags, stones, and dragon candles arranged for display."></div>
+<div class="work-copy">
+<h3>The Work of the Hand</h3>
+<p>These are not mass-produced objects chosen from a catalog. The collection grows from the work already being done—books written, cards created, bags sewn, stones gathered, candles poured, and custom pieces built by hand.</p>
+<p>As the Commissary grows, we will keep the collection curated. The purpose is not to fill shelves. It is to offer meaningful works that belong here.</p>
+</div>
+</div>
+</section>
+
+<section class="section vellum">
+<div class="inner">
+<h2>The Written Works</h2>
+<p class="intro">The Library holds the knowledge. The Commissary provides a path to acquire the physical works.</p>
+<div class="work-photo">
+<div class="work-copy">
+<h3>Published Books</h3>
+<p>The Church's published books can be acquired through Amazon. The Church Library remains the place to learn about the works; the Commissary provides the acquisition path.</p>
+<a class="amazon" target="_blank" rel="noopener" href="https://www.amazon.com/s?k=The+Twelve+Laws+of+Dragon+Magick">FIND THE BOOKS ON AMAZON →</a>
+<div class="note">Church booklets and other directly provided materials will be added here as their availability and delivery method are established.</div>
+</div>
+<div><img class="photo" src="commissary-collection.jpg" alt="Church of the First Day collection of books and booklets."></div>
+</div>
+</div>
+</section>
+
+<section class="quote"><p>“Some are written. Some are crafted. Some are made by hand. All are offered with purpose.”</p></section>
 </main>
+
 <footer><strong>The Church of the First Day</strong><div class="small">A Path of Awakening, Recognition, and Becoming · Contact · Newsletter · Privacy · Accessibility</div></footer>
 </body>
 </html>

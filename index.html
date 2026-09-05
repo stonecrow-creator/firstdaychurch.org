@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Church of the First Day — A path of awakening, recognition, and becoming.">
+<title>The Church of the First Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#06121c;
+  --navy2:#0b1c2a;
+  --gold:#d6a443;
+  --gold2:#f2d18a;
+  --vellum:#efe0bb;
+  --ink:#201b14;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:#fff;font-family:"Cormorant Garamond",Georgia,serif}
+a{color:inherit;text-decoration:none}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  min-height:72px;background:rgba(5,17,27,.97);
+  border-bottom:1px solid rgba(214,164,67,.55);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px clamp(16px,4vw,56px);
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{
+  width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold2);font-size:26px;
+}
+.brand-title{font-family:Cinzel,serif;font-size:clamp(15px,1.6vw,24px);letter-spacing:.07em;color:#f4dfad}
+.brand-sub{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#d5c39c;margin-top:2px}
+nav{display:flex;align-items:center;gap:clamp(12px,2.1vw,28px);font-family:Cinzel,serif;font-size:14px}
+nav a{padding:8px 0;color:#eadfc7}
+nav a:hover,nav a.active{color:var(--gold2);border-bottom:1px solid var(--gold)}
+.nav-cta{
+  padding:11px 18px;border:1px solid var(--gold);border-radius:4px;
+  background:linear-gradient(#6f4c20,#34250f);box-shadow:0 0 18px rgba(214,164,67,.12)
+}
+.section{position:relative;overflow:hidden}
+.art{width:100%;display:block}
+.hotspot{
+  position:absolute;display:block;border-radius:8px;
+  outline:1px solid transparent;transition:.2s;
+}
+.hotspot:hover{background:rgba(214,164,67,.08);outline-color:rgba(242,209,138,.65)}
+.hero .hot-come{left:9%;top:57%;width:27%;height:11%}
+.hero .hot-video{right:4%;top:34%;width:41%;height:42%}
+.radiances .hot-r1{left:3%;top:16%;width:11%;height:70%}
+.radiances .hot-r2{left:15%;top:16%;width:11%;height:70%}
+.radiances .hot-r3{left:27%;top:16%;width:11%;height:70%}
+.radiances .hot-r4{left:39%;top:16%;width:11%;height:70%}
+.radiances .hot-r5{left:51%;top:16%;width:11%;height:70%}
+.radiances .hot-r6{left:63%;top:16%;width:11%;height:70%}
+.radiances .hot-r7{left:75%;top:16%;width:11%;height:70%}
+.radiances .hot-r8{left:87%;top:16%;width:11%;height:70%}
+.cards a{top:0;height:100%;width:33.333%}
+.cards .c1{left:0}.cards .c2{left:33.333%}.cards .c3{left:66.666%}
+.cta .hot-cta{left:38%;top:42%;width:24%;height:23%}
+.mobile-menu{display:none}
+@media(max-width:900px){
+  .site-header{position:relative;flex-wrap:wrap;gap:10px}
+  nav{width:100%;justify-content:center;flex-wrap:wrap}
+  .brand-title{font-size:15px}
+}
+@media(max-width:600px){
+  .site-header{padding:10px 14px}
+  .brand-mark{width:40px;height:40px;font-size:21px}
+  .brand-sub{font-size:8px;letter-spacing:.16em}
+  nav{gap:10px;font-size:11px}
+  .nav-cta{padding:8px 10px}
+}
+footer{background:#06121c;text-align:center;padding:28px 16px;color:#d8cba9}
+footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
+.small{font-size:13px;opacity:.85;margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="The Church of the First Day home">
+    <div class="brand-mark">✦</div>
+    <div>
+      <div class="brand-title">The Church of the First Day</div>
+      <div class="brand-sub">A Path of Awakening, Recognition, and Becoming</div>
+    </div>
+  </a>
+  <nav aria-label="Main navigation">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#radiances">The Radiances</a>
+    <a href="#learn">Learn</a>
+    <a href="#community">Community</a>
+    <a href="#visit">Visit</a>
+    <a class="nav-cta" href="#visit">COME AS YOU ARE</a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="section hero" aria-label="Welcome">
+    <img class="art" src="hero.jpg" alt="A sunrise over a fantasy mountain kingdom, with a traveler and dragon.">
+    <a class="hotspot hot-come" href="#visit" aria-label="Please come in"></a>
+    <a class="hotspot hot-video" href="#about" aria-label="Welcome video"></a>
+  </section>
+
+  <section class="section radiances" id="radiances" aria-label="The Eight Radiances">
+    <img class="art" src="radiances.jpg" alt="The Eight Radiances: Illumination, Compassion, Presence, Courage, Wisdom, Harmony, Service, and Becoming.">
+    <a class="hotspot hot-r1" href="#learn" aria-label="Illumination"></a>
+    <a class="hotspot hot-r2" href="#learn" aria-label="Compassion"></a>
+    <a class="hotspot hot-r3" href="#learn" aria-label="Presence"></a>
+    <a class="hotspot hot-r4" href="#learn" aria-label="Courage"></a>
+    <a class="hotspot hot-r5" href="#learn" aria-label="Wisdom"></a>
+    <a class="hotspot hot-r6" href="#learn" aria-label="Harmony"></a>
+    <a class="hotspot hot-r7" href="#community" aria-label="Service"></a>
+    <a class="hotspot hot-r8" href="#learn" aria-label="Becoming"></a>
+  </section>
+
+  <section class="section cards" id="learn" aria-label="Explore">
+    <img class="art" src="cards.jpg" alt="Explore Our Teachings, Begin Your Journey, and Find Your Community.">
+    <a class="hotspot c1" href="#teachings" aria-label="Explore Our Teachings"></a>
+    <a class="hotspot c2" href="#journey" aria-label="Begin Your Journey"></a>
+    <a class="hotspot c3" href="#community" aria-label="Find Your Community"></a>
+  </section>
+
+  <section class="section cta" id="visit" aria-label="Come as you are">
+    <img class="art" src="cta.jpg" alt="The First Day will meet you where you stand.">
+    <a class="hotspot hot-cta" href="#about" aria-label="Come as you are"></a>
+  </section>
+
+  <section id="about" style="padding:56px 20px;background:#0a1b28;text-align:center">
+    <h1 style="font-family:Cinzel,serif;color:#f0d28f;letter-spacing:.08em">Welcome to the First Day</h1>
+    <p style="max-width:760px;margin:0 auto;font-size:20px;line-height:1.6;color:#e8dcc1">
+      This space will become the living home of the Church of the First Day—its teachings,
+      practices, community, publications, and invitation to walk a path of awakening,
+      recognition, and becoming.
+    </p>
+  </section>
+
+  <section id="teachings" style="padding:40px 20px;background:#efe0bb;color:#201b14;text-align:center">
+    <h2 style="font-family:Cinzel,serif;letter-spacing:.08em">The Teachings</h2>
+    <p>Practical wisdom for everyday life. This section is ready for the church's teachings and books.</p>
+  </section>
+
+  <section id="journey" style="padding:40px 20px;background:#0b1c2a;text-align:center">
+    <h2 style="font-family:Cinzel,serif;color:#f0d28f">Begin Your Journey</h2>
+    <p style="font-size:18px">You don't need all the answers. You only need the willingness to begin.</p>
+  </section>
+
+  <section id="community" style="padding:40px 20px;background:#efe0bb;color:#201b14;text-align:center">
+    <h2 style="font-family:Cinzel,serif">Find Your Community</h2>
+    <p>We learn and grow together. This will become the church community and gathering area.</p>
+  </section>
+</main>
+
+<footer>
+  <strong>The Church of the First Day</strong>
+  <div class="small">A Path of Awakening, Recognition, and Becoming · Contact · Newsletter · Privacy · Accessibility</div>
+</footer>
+</body>
+</html>

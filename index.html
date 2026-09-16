@@ -78,15 +78,6 @@ nav a:hover,nav a.active{color:var(--gold2);border-bottom:1px solid var(--gold)}
 footer{background:#06121c;text-align:center;padding:28px 16px;color:#d8cba9}
 footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
 .small{font-size:13px;opacity:.85;margin-top:8px}
-
-/* Welcome video overlay */
-.video-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:24px}
-.video-overlay.open{display:flex}
-.video-frame{position:relative;width:min(1100px,94vw);aspect-ratio:16/9;background:#000;box-shadow:0 0 45px rgba(214,164,67,.25);border:1px solid rgba(214,164,67,.7)}
-.video-frame iframe{width:100%;height:100%;border:0}
-.video-close{position:absolute;right:-4px;top:-48px;width:38px;height:38px;border:1px solid #d6a443;background:#06121c;color:#f2d18a;font:700 24px Georgia,serif;cursor:pointer;border-radius:50%}
-.video-close:hover{background:#34250f}
-
 </style>
 </head>
 <body>
@@ -102,61 +93,38 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
   <nav aria-label="Main navigation">
     <a class="active" href="#home">Home</a>
     <a href="about.html">About</a>
-    <a href="radiances.html">The Radiances</a>
-    <a href="learn.html">Learn</a>
-    <a href="community.html">Community</a>
-    <a href="library.html">Library</a>
-    <a href="commissary.html">Commissary</a>
+    <a href="#radiances">The Radiances</a>
+    <a href="#learn">Learn</a>
+    <a href="#community">Community</a>
     <a href="#visit">Visit</a>
     <a class="nav-cta" href="#visit">COME AS YOU ARE</a>
   </nav>
 </header>
 
-
-<div class="video-overlay" id="welcomeVideo" role="dialog" aria-modal="true" aria-label="Welcome video">
-  <div class="video-frame">
-    <button class="video-close" type="button" aria-label="Close welcome video" onclick="closeWelcomeVideo()">×</button>
-    <iframe id="welcomeVideoFrame"
-      src=""
-      title="The Church of the First Day"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-</div>
-
 <main id="home">
   <section class="section hero" aria-label="Welcome">
     <img class="art" src="hero.jpg" alt="A sunrise over a fantasy mountain kingdom, with a traveler and dragon.">
     <a class="hotspot hot-come" href="#visit" aria-label="Please come in"></a>
-    <a class="hotspot hot-video" href="#welcome-video" aria-label="Play the Church of the First Day welcome video" onclick="openWelcomeVideo(event)"></a>
+    <a class="hotspot hot-video" href="about.html" aria-label="Welcome video"></a>
   </section>
 
   <section class="section radiances" id="radiances" aria-label="The Eight Radiances">
-    <img class="art" src="radiances.jpg" alt="The Eight Radiances: the four great festivals and four radiant feasts of the sacred Wheel of the First Day.">
-    <a class="hotspot hot-r1" href="radiances.html" aria-label="Festival of the Skyborn Mind"></a>
-    <a class="hotspot hot-r2" href="radiances.html" aria-label="Festival of the Ember Crown"></a>
-    <a class="hotspot hot-r3" href="radiances.html" aria-label="Festival of the Deep Waters"></a>
-    <a class="hotspot hot-r4" href="radiances.html" aria-label="Festival of the Rooted Star"></a>
-    <a class="hotspot hot-r5" href="radiances.html" aria-label="Radiance of the First Day"></a>
-    <a class="hotspot hot-r6" href="radiances.html" aria-label="Radiance of the Fourfold Path"></a>
-    <a class="hotspot hot-r7" href="radiances.html" aria-label="Radiance of the Celestial Eye"></a>
-    <a class="hotspot hot-r8" href="radiances.html" aria-label="Radiance of the Star Fire"></a>
-  </section>
-
-  <section style="padding:42px 22px;background:#06121c;text-align:center;border-top:1px solid rgba(214,164,67,.35);border-bottom:1px solid rgba(214,164,67,.35)">
-    <h2 style="font-family:Cinzel,serif;color:#f0d28f;letter-spacing:.09em;margin:0 0 12px">THE EIGHT RADIANCES</h2>
-    <p style="max-width:860px;margin:0 auto 20px;font-size:20px;line-height:1.55;color:#e6dcc7">
-      The sacred cycle of the First Day is carried through four great festivals and four radiant feasts:
-      Skyborn Mind, Ember Crown, Deep Waters, Rooted Star, First Day, Fourfold Path, Celestial Eye, and Star Fire.
-    </p>
-    <a href="radiances.html" style="display:inline-block;padding:10px 18px;border:1px solid #d6a443;border-radius:4px;color:#f2d18a;font-family:Cinzel,serif;letter-spacing:.07em">EXPLORE THE WHEEL →</a>
+    <img class="art" src="radiances.jpg" alt="The Eight Radiances: Illumination, Compassion, Presence, Courage, Wisdom, Harmony, Service, and Becoming.">
+    <a class="hotspot hot-r1" href="#learn" aria-label="Illumination"></a>
+    <a class="hotspot hot-r2" href="#learn" aria-label="Compassion"></a>
+    <a class="hotspot hot-r3" href="#learn" aria-label="Presence"></a>
+    <a class="hotspot hot-r4" href="#learn" aria-label="Courage"></a>
+    <a class="hotspot hot-r5" href="#learn" aria-label="Wisdom"></a>
+    <a class="hotspot hot-r6" href="#learn" aria-label="Harmony"></a>
+    <a class="hotspot hot-r7" href="#community" aria-label="Service"></a>
+    <a class="hotspot hot-r8" href="#learn" aria-label="Becoming"></a>
   </section>
 
   <section class="section cards" id="learn" aria-label="Explore">
     <img class="art" src="cards.jpg" alt="Explore Our Teachings, Begin Your Journey, and Find Your Community.">
-    <a class="hotspot c1" href="learn.html" aria-label="Explore Our Teachings"></a>
+    <a class="hotspot c1" href="#teachings" aria-label="Explore Our Teachings"></a>
     <a class="hotspot c2" href="#journey" aria-label="Begin Your Journey"></a>
-    <a class="hotspot c3" href="community.html" aria-label="Find Your Community"></a>
+    <a class="hotspot c3" href="#community" aria-label="Find Your Community"></a>
   </section>
 
   <section class="section cta" id="visit" aria-label="Come as you are">
@@ -164,7 +132,14 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
     <a class="hotspot hot-cta" href="about.html" aria-label="Come as you are"></a>
   </section>
 
-
+  <section id="about" style="padding:56px 20px;background:#0a1b28;text-align:center">
+    <h1 style="font-family:Cinzel,serif;color:#f0d28f;letter-spacing:.08em">Welcome to the First Day</h1>
+    <p style="max-width:760px;margin:0 auto;font-size:20px;line-height:1.6;color:#e8dcc1">
+      This space will become the living home of the Church of the First Day—its teachings,
+      practices, community, publications, and invitation to walk a path of awakening,
+      recognition, and becoming.
+    </p>
+  </section>
 
   <section id="teachings" style="padding:40px 20px;background:#efe0bb;color:#201b14;text-align:center">
     <h2 style="font-family:Cinzel,serif;letter-spacing:.08em">The Teachings</h2>
@@ -186,30 +161,5 @@ footer strong{font-family:Cinzel,serif;color:#efdaa4;letter-spacing:.08em}
   <strong>The Church of the First Day</strong>
   <div class="small">A Path of Awakening, Recognition, and Becoming · Contact · Newsletter · Privacy · Accessibility</div>
 </footer>
-
-<script>
-function openWelcomeVideo(event){
-  event.preventDefault();
-  const overlay=document.getElementById('welcomeVideo');
-  const frame=document.getElementById('welcomeVideoFrame');
-  frame.src='https://www.youtube.com/embed/9Go_P7BQUnA?autoplay=1&rel=0';
-  overlay.classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeWelcomeVideo(){
-  const overlay=document.getElementById('welcomeVideo');
-  const frame=document.getElementById('welcomeVideoFrame');
-  frame.src='';
-  overlay.classList.remove('open');
-  document.body.style.overflow='';
-}
-document.getElementById('welcomeVideo').addEventListener('click',function(e){
-  if(e.target===this) closeWelcomeVideo();
-});
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape') closeWelcomeVideo();
-});
-</script>
-
 </body>
 </html>
